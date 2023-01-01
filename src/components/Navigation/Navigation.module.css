@@ -1,0 +1,50 @@
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem auto;
+    max-width: 1280px;
+}
+
+.header{
+    display: flex;
+}
+
+.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 10vh;
+}
+
+.img:hover{
+    cursor: pointer;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+}
+
+.ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.li{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 1rem;
+}
+
+.a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+}
