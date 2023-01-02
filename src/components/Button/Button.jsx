@@ -2,7 +2,7 @@ import styles from "./Button.module.css"
 
 const Button = ({name, type, icon}) => {
     return(
-            <button type="button" className={type === "lightGold" ? styles.lightGold : type === "darkGold" ? styles.lightGold : null }>
+            <button type="button" className={type === "lightGold" ? styles.lightGold : type === "darkGold" ? styles.darkGold : null }>
                     <span className={styles.span}>
                         {name}
                     </span>

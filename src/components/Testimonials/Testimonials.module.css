@@ -1,10 +1,10 @@
 .container{
     background-color: #495e57;
-    padding: 2.5rem 0;
+    padding: 5rem 0;
 }
 
 .sectionTop{
-    margin: 5rem auto;
+    margin: 0 auto;
     max-width: 1280px;
 }
 
@@ -12,10 +12,11 @@
     text-align: center;
     font-size: 2.5rem;
     color: white;
+    padding-bottom: 3rem;
 }
 
 .sectionBottom{
-    margin: 5rem auto;
+    margin: 0 auto;
     max-width: 1280px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -62,4 +63,23 @@
 .p{
     margin: 1rem;
     text-align: start;
+}
+
+@media (max-width: 1280px) {
+    .sectionBottom{
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 1280px) {
+    .sectionBottom{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 3rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .sectionBottom{
+        grid-template-columns: 1fr;
+    }
 }

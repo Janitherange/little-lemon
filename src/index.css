@@ -19,6 +19,7 @@ a {
 
 a:hover {
     color: #f4ce14;
+    cursor: pointer;
 }
 
 body {
@@ -64,5 +65,15 @@ button {
 button:focus,
 button:focus-visible {
     outline: none;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    text-align: start;
 }
 

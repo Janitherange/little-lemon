@@ -13,11 +13,11 @@ const HeroSection = () => {
                         We are family owned Mediterranean resturent, focused on traditional recipes served with a modern
                         twist.
                     </p>
-                    <div>
+                    <div className={styles.button}>
                         <Button name="Reserve a Table" type="lightGold"/>
                     </div>
                 </article>
-                <aside>
+                <aside className={styles.aside}>
                     <figure className={styles.figure}>
                         <img className={styles.img} src={heroImg} alt="hero image"/>
                     </figure>
