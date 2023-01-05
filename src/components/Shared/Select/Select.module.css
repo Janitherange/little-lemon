@@ -1,0 +1,74 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #495e57;
+    border-radius: 20px;
+    width: 9rem;
+    padding: 1rem;
+    justify-content: space-between;
+    text-align: center;
+    color: #495e57;
+}
+
+.button:focus-visible{
+    outline: none;
+}
+
+.buttonSelected{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #495e57;
+    border-radius: 20px;
+    width: 9rem;
+    padding: 1rem;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #495e57;
+    color: white;
+}
+
+.chevron{
+    width: 1rem;
+}
+
+.ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top: 4rem;
+    background-color: #ffffff;
+    border: 1px solid #495e57;
+    border-radius: 15px;
+    width: 7rem;
+    height: 9rem;
+    overflow-y: scroll;
+    overflow-scrolling: auto;
+    z-index: 7;
+}
+
+.li{
+    padding: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.li:hover{
+    background-color: #495e57;
+    color: #ffffff;
+    cursor: pointer;
+}

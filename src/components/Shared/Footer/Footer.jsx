@@ -1,8 +1,9 @@
 import styles from "./Footer.module.css"
-import logo from "../../assets/Asset 20@4x.png"
-import facebook from "../../assets/icons8-facebook-50.png"
-import twitter from "../../assets/icons8-twitter-circled-50.png"
-import linkedin from "../../assets/icons8-linkedin-circled-50.png"
+import logo from "../../../assets/Asset 20@4x.png"
+import facebook from "../../../assets/icons8-facebook-50.png"
+import twitter from "../../../assets/icons8-twitter-circled-50.png"
+import linkedin from "../../../assets/icons8-linkedin-circled-50.png"
+import Menu from "../Menu/Menu.jsx";
 
 const Footer = () => {
     return (
@@ -13,14 +14,7 @@ const Footer = () => {
                 </figure>
                 <nav>
                     <h4 className={styles.h4}>Navigation</h4>
-                    <ul>
-                        <li className={styles.li}><a className={styles.a}>Home</a></li>
-                        <li className={styles.li}><a className={styles.a}>About</a></li>
-                        <li className={styles.li}><a className={styles.a}>Menu</a></li>
-                        <li className={styles.li}><a className={styles.a}>Reservations</a></li>
-                        <li className={styles.li}><a className={styles.a}>Order Online</a></li>
-                        <li className={styles.li}><a className={styles.a}>Login</a></li>
-                    </ul>
+                    <Menu type="footerMenu"/>
                 </nav>
                 <nav>
                     <h4 className={styles.h4}>Contact</h4>

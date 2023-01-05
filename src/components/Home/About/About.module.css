@@ -82,12 +82,6 @@
 
 @media (max-width: 700px) {
     .p {
-        padding-right: 5rem;
-    }
-}
-
-@media (max-width: 540px) {
-    .p {
         padding-right: 0;
     }
 }

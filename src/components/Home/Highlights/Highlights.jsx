@@ -1,9 +1,9 @@
-import Button from "../Button/Button.jsx";
+import Button from "../../Shared/Button/Button.jsx";
 import styles from "./Highlights.module.css"
-import icon from "../../assets/icons8-delivery-bike-64.png"
-import highlight1 from "../../assets/nadine-primeau--ftWfohtjNw-unsplash.jpg"
-import highlight2 from "../../assets/aliona-gumeniuk-7sJMQ_amtiQ-unsplash.jpg"
-import highlight3 from "../../assets/towfiqu-barbhuiya-yPYOG4_j6YI-unsplash.jpg"
+import icon from "../../../assets/icons8-delivery-bike-64.png"
+import highlight1 from "../../../assets/nadine-primeau--ftWfohtjNw-unsplash.jpg"
+import highlight2 from "../../../assets/aliona-gumeniuk-7sJMQ_amtiQ-unsplash.jpg"
+import highlight3 from "../../../assets/towfiqu-barbhuiya-yPYOG4_j6YI-unsplash.jpg"
 
 const Highlights = () => {
     return (

@@ -1,0 +1,126 @@
+.section{
+    display: flex;
+    flex-direction: column;
+    margin: 6rem auto 1rem auto;
+    max-width: 1280px;
+    position: relative;
+    padding: 5rem 0;
+}
+
+.h4Div{
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.h4{
+    color: #495e57;
+    font-weight: bold;
+    text-align: start;
+}
+
+.containerQuantity{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid #495e57;
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin: 1rem 0;
+}
+
+.quantity{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #495e57;
+    border-radius: 20px;
+    justify-content: space-between;
+}
+
+.quantityButton{
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem 1rem;
+}
+
+.quantityValue{
+    padding: 0.75rem 1rem;
+    color: #495e57;
+}
+
+.quantityIcon{
+    width: 1rem;
+}
+
+.containerDate{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #495e57;
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin: 1rem 0;
+}
+
+.date{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.dateInput{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #495e57;
+    border-radius: 20px;
+    width: 9rem;
+    justify-content: space-between;
+    text-align: center;
+    color: #495e57;
+    padding: 1rem;
+}
+
+.dateInput:focus-visible{
+    outline: none;
+}
+
+.containerTime{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #495e57;
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin: 1rem 0;
+
+}
+
+.timeWrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
+    margin-top: 2rem;
+}
+
+.span{
+    color: #495e57;
+    font-weight: bold;
+}
+
+.timeDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time{
+    border: 1px solid #495e57;
+    border-radius: 20px;
+    width: 8rem;
+    text-align: center;
+    color: #495e57;
+    padding: 0.75rem 1rem;
+}
+
+.time:hover{
+    cursor: pointer;
+}

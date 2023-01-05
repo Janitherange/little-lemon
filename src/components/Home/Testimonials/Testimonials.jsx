@@ -1,8 +1,8 @@
 import styles from "./Testimonials.module.css"
-import rating1 from "../../assets/may-gauthier-0J9l9xRyMSo-unsplash.jpg"
-import rating2 from "../../assets/vince-veras-AJIqZDAUD7A-unsplash.jpg"
-import rating3 from "../../assets/jurica-koletic-7YVZYZeITc8-unsplash.jpg"
-import rating4 from "../../assets/ben-den-engelsen-YUu9UAcOKZ4-unsplash.jpg"
+import rating1 from "../../../assets/may-gauthier-0J9l9xRyMSo-unsplash.jpg"
+import rating2 from "../../../assets/vince-veras-AJIqZDAUD7A-unsplash.jpg"
+import rating3 from "../../../assets/jurica-koletic-7YVZYZeITc8-unsplash.jpg"
+import rating4 from "../../../assets/ben-den-engelsen-YUu9UAcOKZ4-unsplash.jpg"
 
 const Testimonials = () => {
     return(
