@@ -5,14 +5,18 @@ import chevronDownWhite from "../../../assets/icons8-chevron-down-white.png";
 import styles from "./Select.module.css";
 import { useState } from "react";
 
-const Select = ({ data }) => {
+const Select = ({ data, setSelectValue }) => {
   const [open, setOpen] = useState(false);
   const [item, setItem] = useState("select");
 
-  const openMenu = () => {
+  const toggleMenu = () => {
     const modal = document.getElementById("select_modal");
     document.getElementById("root").appendChild(modal);
     setOpen(!open);
+  };
+
+  const closeMenu = () => {
+    setOpen(false);
   };
 
   return (
@@ -20,46 +24,50 @@ const Select = ({ data }) => {
       <div
         id="select_modal"
         style={open ? { display: "block" } : { display: "none" }}
-        onClick={() => openMenu(false)}
+        onClick={() => toggleMenu()}
       />
-      <input
-        type="date"
+      <button
+        type="button"
         className={item === "select" ? styles.button : styles.buttonSelected}
-      />
-      {/*  <span>{item}</span>*/}
-      {/*  <span>*/}
-      {/*    {open && item === "select" ? (*/}
-      {/*      <img className={styles.chevron} src={chevronUp} alt="chevron" />*/}
-      {/*    ) : !open && item === "select" ? (*/}
-      {/*      <img className={styles.chevron} src={chevronDown} alt="chevron" />*/}
-      {/*    ) : open && item != "select" ? (*/}
-      {/*      <img*/}
-      {/*        className={styles.chevron}*/}
-      {/*        src={chevronUpWhite}*/}
-      {/*        alt="chevron"*/}
-      {/*      />*/}
-      {/*    ) : !open && item != "select" ? (*/}
-      {/*      <img*/}
-      {/*        className={styles.chevron}*/}
-      {/*        src={chevronDownWhite}*/}
-      {/*        alt="chevron"*/}
-      {/*      />*/}
-      {/*    ) : null}*/}
-      {/*  </span>*/}
-      {/*</input>*/}
+        onClick={() => {
+          toggleMenu();
+        }}
+      >
+        <span>{item}</span>
+        <span>
+          {open && item === "select" ? (
+            <img className={styles.chevron} src={chevronUp} alt="chevron" />
+          ) : !open && item === "select" ? (
+            <img className={styles.chevron} src={chevronDown} alt="chevron" />
+          ) : open && item !== "select" ? (
+            <img
+              className={styles.chevron}
+              src={chevronUpWhite}
+              alt="chevron"
+            />
+          ) : !open && item !== "select" ? (
+            <img
+              className={styles.chevron}
+              src={chevronDownWhite}
+              alt="chevron"
+            />
+          ) : null}
+        </span>
+      </button>
       {open && (
         <ul className={styles.ul}>
           {data &&
             data.map((item) => (
               <li
                 className={styles.li}
-                key={item.id}
+                key={item}
                 onClick={() => {
-                  setItem(item.month);
-                  openMenu();
+                  setItem(item);
+                  closeMenu();
+                  setSelectValue(item);
                 }}
               >
-                {item.month}
+                {item}
               </li>
             ))}
         </ul>

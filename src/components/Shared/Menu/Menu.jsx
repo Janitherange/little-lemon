@@ -34,11 +34,6 @@ const Menu = ({ type, close }) => {
                 Order Online
               </NavLink>
             </li>
-            <li className={styles.li}>
-              <NavLink to="/login" className={styles.a}>
-                Login
-              </NavLink>
-            </li>
           </ul>
         </nav>
       ) : type === "smallMenu" ? (
@@ -89,15 +84,6 @@ const Menu = ({ type, close }) => {
                 Order Online
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                to="/login"
-                className={styles.smallScreenA}
-                onClick={close}
-              >
-                Login
-              </NavLink>
-            </li>
           </ul>
         </nav>
       ) : (
@@ -125,11 +111,6 @@ const Menu = ({ type, close }) => {
           <li className={styles.liFooter}>
             <NavLink to="/book" className={styles.aFooter}>
               Order Online
-            </NavLink>
-          </li>
-          <li className={styles.liFooter}>
-            <NavLink to="/login" className={styles.aFooter}>
-              Login
             </NavLink>
           </li>
         </ul>
