@@ -27,13 +27,14 @@ const Select = ({ data, setSelectValue }) => {
         onClick={() => toggleMenu()}
       />
       <button
+        id="selectButton"
         type="button"
         className={item === "select" ? styles.button : styles.buttonSelected}
         onClick={() => {
           toggleMenu();
         }}
       >
-        <span>{item}</span>
+        <span id="occasion">{item}</span>
         <span>
           {open && item === "select" ? (
             <img className={styles.chevron} src={chevronUp} alt="chevron" />
@@ -57,9 +58,9 @@ const Select = ({ data, setSelectValue }) => {
       {open && (
         <ul className={styles.ul}>
           {data &&
-            data.map((item) => (
+            data.map((item, id) => (
               <li
-                className={styles.li}
+                className={`${styles.li} li_${id}`}
                 key={item}
                 onClick={() => {
                   setItem(item);

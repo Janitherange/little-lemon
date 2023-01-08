@@ -4,6 +4,7 @@ import plus from "../../../assets/icons8-plus-math.png";
 import minus from "../../../assets/icons8-subtract.png";
 import Select from "../../Shared/Select/Select.jsx";
 import { toast } from "react-toastify";
+
 const Booking = () => {
   const [date, setDate] = useState("");
   const [timeArr, setTimeArr] = useState([]);
@@ -123,24 +124,15 @@ const Booking = () => {
         progress: undefined,
         theme: "light",
       });
+
+      const data = {
+        date: date,
+        time: selectedTime,
+        gusts: gustsCount,
+        occasion: selectedOccasion,
+      };
     }
   };
-
-  // const saveBooking = () => {
-  //   const previousData = JSON.parse(
-  //     localStorage.getItem("reservation") || "[]"
-  //   );
-  //   const data = {
-  //     date: date,
-  //     time: selectedTime,
-  //     gusts: gustsCount,
-  //     occasion: selectedOccasion,
-  //   };
-  //
-  //   previousData.push(data);
-  //
-  //   localStorage.setItem("reservation", JSON.stringify(previousData));
-  // };
 
   return (
     <div className={styles.container}>
@@ -159,8 +151,11 @@ const Booking = () => {
               >
                 <img src={minus} alt="minus" className={styles.quantityIcon} />
               </button>
-              <span className={styles.quantityValue}>{gustsCount}</span>
+              <span id="gusts" className={styles.quantityValue}>
+                {gustsCount}
+              </span>
               <button
+                data-testid="increaseCount"
                 type="button"
                 className={styles.quantityButton}
                 onClick={() => setGustsCount(gustsCount + 1)}
@@ -184,6 +179,7 @@ const Booking = () => {
               </h4>
             </div>
             <input
+              id="date"
               value={date}
               onChange={(event) => fetchData(event)}
               type="date"
@@ -227,16 +223,14 @@ const Booking = () => {
           </div>
           {timeArr.length > 0 && (
             <div className={styles.timeWrapper}>
-              {timeArr.map((time) => (
+              {timeArr.map((time, id) => (
                 <div key={time} className={styles.timeDiv}>
                   <time
+                    id={`selected_${id}`}
                     onClick={() => setSelectedTime(time)}
-                    className={styles.time}
-                    style={
-                      time === selectedTime
-                        ? { backgroundColor: "#495e57", color: "#ffffff" }
-                        : null
-                    }
+                    className={`${
+                      time === selectedTime ? styles.timeSelected : styles.time
+                    }`}
                   >
                     {time}
                   </time>
